@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Jornada de Renda Online: Estratégias para Prosperidade Financeira</title>
+    <!-- Link para o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter para corpo, Montserrat para títulos de destaque, Open Sans para subtítulos e guias -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Definindo as cores da paleta "corporativa sólida" como variáveis CSS */
+        :root {
+            --dark-background: #121212; /* Muito escuro, quase preto chumbo */
+            --dark-card: #1E1E1E; /* Cinza chumbo escuro para cards */
+            --text-light: #E0E0E0; /* Cinza claro para texto principal */
+            --text-muted: #A0A0A0; /* Cinza mais claro para texto secundário */
+            --accent-gold: #FFD700; /* Dourado clássico para destaque primário */
+            --accent-blue: #00BFFF; /* Azul celeste profundo para destaque secundário */
+            --accent-green-subtle: #4CAF50; /* Verde sutil para sucesso/positividade */
+            --border-color: #3A3A3A; /* Cinza escuro para bordas */
+            --shadow-color: rgba(0, 0, 0, 0.6); /* Sombra mais densa */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-background);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 950px;
+            width: 95%;
+            margin: 0 auto;
+            background-color: var(--dark-card);
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 30px var(--shadow-color);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: linear-gradient(90deg, #1A1A1A, #0A0A0A);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            color: var(--accent-gold); /* Dourado forte e clássico */
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra sutil para profundidade */
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em; /* Espaçamento controlado */
+            line-height: 1.1;
+        }
+
+        .header p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.4rem;
+            color: var(--text-muted); /* Texto mais discreto para subtítulo */
+            max-width: 750px;
+            margin: 0.7rem auto 0;
+            line-height: 1.5;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Seção do Gráfico */
+        .graph-section {
+            padding: 2rem 1.5rem;
+            background-color: var(--dark-background);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+            border-radius: 1rem;
+            margin: 0 1.5rem 2rem;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .graph-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .graph-bar-container {
+            background-color: #333333;
+            border-radius: 0.8rem;
+            height: 28px;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .graph-bar-fill {
+            height: 100%;
+            background: linear-gradient(to right, #4CAF50, #FFD700, #DC3545); /* Verde, Dourado, Vermelho (para o gráfico, ok para indicar risco/retorno) */
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .graph-labels {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 0.6rem;
+            font-weight: 500;
+        }
+
+        .potential-profit {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--accent-green-subtle); /* Verde sutil */
+            margin-top: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .potential-profit i {
+            margin-right: 0.6rem;
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+        }
+
+        /* Lista de Guias */
+        .guide-list {
+            padding: 2rem 1.5rem;
+        }
+
+        .guide-item {
+            background-color: var(--dark-card);
+            border-radius: 1.2rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 8px 20px var(--shadow-color);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        .guide-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px var(--shadow-color);
+            border-color: var(--accent-blue); /* Azul sutil no hover */
+        }
+
+        .guide-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.6rem;
+            background: linear-gradient(90deg, #1A1A1A, #0A0A0A);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .guide-header-left {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .guide-number {
+            background: var(--accent-blue); /* Azul para o número do guia */
+            color: var(--dark-background);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .guide-title {
+            font-family: 'Open Sans', sans-serif; /* Open Sans para clareza e seriedade */
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold); /* Dourado para destaque */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.01em; /* Espaçamento mínimo */
+        }
+
+        .guide-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            color: var(--text-muted);
+        }
+
+        .guide-info {
+            display: flex;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-left: 1.2rem;
+            white-space: nowrap;
+        }
+
+        .guide-info i {
+            margin-right: 0.45rem;
+            color: var(--accent-blue);
+        }
+
+        .arrow-icon {
+            font-size: 1.6rem;
+            color: var(--accent-blue);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Conteúdo do Guia (Expandido) */
+        .guide-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            background-color: var(--dark-background);
+            border-top: 1px solid var(--border-color);
+            padding: 0 1.8rem;
+            box-sizing: border-box;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .guide-content.expanded {
+            max-height: 2000px; /* Suficiente para todo o conteúdo */
+            padding: 1.8rem;
+        }
+
+        /* Estilo da barra de rolagem (WebKit) */
+        .guide-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .guide-content::-webkit-scrollbar-track {
+            background: #222222;
+            border-radius: 10px;
+        }
+
+        .guide-content::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 10px;
+            border: 2px solid var(--dark-background);
+        }
+
+        .guide-content::-webkit-scrollbar-thumb:hover {
+            background: #008CBA; /* Azul mais escuro no hover */
+        }
+
+        .guide-content h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: var(--accent-blue); /* Azul para subtítulos de conteúdo */
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(0, 191, 255, 0.3);
+            padding-bottom: 0.6rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .guide-content p, .guide-content ul {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .guide-content ul {
+            list-style: disc;
+            padding-left: 1.8rem;
+        }
+
+        .guide-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-green-subtle);
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .meta-text i {
+            margin-right: 0.6rem;
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+        }
+
+        /* Super Bônus */
+        .bonus-item {
+            background: linear-gradient(135deg, #2A2A2A, #1A1A1A); /* Tons de cinza mais ricos */
+            color: var(--text-light);
+            border-radius: 1.5rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 10px 25px var(--shadow-color);
+            border: 2px solid var(--accent-gold); /* Borda dourada sólida */
+            animation: none; /* Sem animação para seriedade */
+        }
+
+        .bonus-item .guide-header {
+            background: linear-gradient(90deg, #333333, #222222);
+            border-bottom: none;
+            padding: 1.8rem;
+        }
+
+        .bonus-item .guide-number {
+            background: var(--accent-gold);
+            color: var(--dark-background);
+            box-shadow: none; /* Sem brilho */
+        }
+
+        .bonus-item .guide-number i {
+            color: var(--dark-background);
+            font-size: 1.6rem;
+        }
+
+        .bonus-item .guide-title {
+            color: var(--accent-gold);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .bonus-item .guide-subtitle {
+            color: var(--text-muted);
+        }
+
+        .bonus-item .guide-info i, .bonus-item .guide-info {
+            color: var(--accent-gold);
+        }
+
+        .bonus-item .arrow-icon {
+            color: var(--accent-gold);
+        }
+
+        .bonus-item .guide-content {
+            background-color: var(--dark-background);
+        }
+
+        .bonus-item .guide-content h3 {
+            color: var(--accent-gold);
+            border-bottom-color: rgba(255, 215, 0, 0.3);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .bonus-item .guide-content p, .bonus-item .guide-content ul, .bonus-item .guide-content li {
+            color: var(--text-light);
+        }
+
+        .bonus-item .meta-text {
+            color: var(--accent-gold);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Bloco de Upsell */
+        .upsell-block {
+            background: linear-gradient(135deg, #0A0A0A, #1A1A1A);
+            border-radius: 1.8rem;
+            padding: 2.2rem;
+            margin: 2.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 18px 35px var(--shadow-color);
+            border: 2px solid var(--accent-gold); /* Borda dourada sólida */
+            animation: pulse-upsell-border-subtle 2s infinite alternate; /* Animação mais suave */
+        }
+
+        @keyframes pulse-upsell-border-subtle {
+            from { border-color: var(--accent-gold); box-shadow: 0 18px 35px var(--shadow-color), 0 0 15px rgba(255, 215, 0, 0.4); }
+            to { border-color: var(--accent-blue); box-shadow: 0 22px 40px var(--shadow-color), 0 0 20px rgba(0, 191, 255, 0.5); }
+        }
+
+        .upsell-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-gold); /* Dourado para o título do upsell */
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para profundidade */
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+
+        .upsell-title i {
+            margin-right: 0.8rem;
+            font-size: 2.8rem;
+            color: var(--accent-gold); /* Cadeado dourado */
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)); /* Sombra para profundidade */
+        }
+
+        .upsell-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .upsell-button {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue)); /* Gradiente Dourado para Azul */
+            color: var(--dark-background);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            padding: 1.1rem 2.4rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--text-light);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .upsell-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.6);
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+        }
+
+        .upsell-button i {
+            font-size: 1.5rem;
+            margin-right: 0.7rem;
+            color: var(--dark-background);
+        }
+
+        .upsell-value-prop {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 1.8rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2.5rem 1.2rem;
+            }
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            .header p {
+                font-size: 1.15rem;
+            }
+            .graph-section {
+                padding: 1.8rem 1.2rem;
+                margin: 0 1rem 1.2rem;
+            }
+            .graph-title {
+                font-size: 1.6rem;
+            }
+            .potential-profit {
+                font-size: 1.2rem;
+            }
+            .guide-list {
+                padding: 1.8rem 1.2rem;
+            }
+            .guide-item {
+                margin-bottom: 1.2rem;
+            }
+            .guide-header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.4rem;
+            }
+            .guide-number {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+                margin-right: 1rem;
+            }
+            .guide-title {
+                font-size: 1.35rem;
+            }
+            .guide-subtitle {
+                font-size: 0.9rem;
+            }
+            .guide-info {
+                margin-left: 0.8rem;
+                font-size: 0.8rem;
+            }
+            .guide-content.expanded {
+                padding: 1.5rem;
+            }
+            .guide-content h3 {
+                font-size: 1.3rem;
+            }
+            .guide-content p, .guide-content ul {
+                font-size: 0.95rem;
+            }
+            .meta-text {
+                font-size: 1rem;
+            }
+
+            /* Responsividade para o bloco de upsell */
+            .upsell-block {
+                padding: 1.8rem;
+                margin: 2rem 1rem;
+            }
+            .upsell-title {
+                font-size: 2rem;
+            }
+            .upsell-title i {
+                font-size: 2.2rem;
+                margin-right: 0.7rem;
+            }
+            .upsell-description {
+                font-size: 1rem;
+            }
+            .upsell-button {
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+            }
+            .upsell-button i {
+                font-size: 1.3rem;
+            }
+            .upsell-value-prop {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 2rem 0.8rem;
+            }
+            .header h1 {
+                font-size: 2.2rem;
+                letter-spacing: normal;
+            }
+            .header p {
+                font-size: 0.95rem;
+            }
+            .graph-section {
+                padding: 1.5rem 0.8rem;
+                margin: 0 0.5rem 1rem;
+            }
+            .graph-title {
+                font-size: 1.3rem;
+            }
+            .potential-profit {
+                font-size: 1rem;
+            }
+            .guide-list {
+                padding: 1.5rem 0.8rem;
+            }
+            .guide-item {
+                margin-bottom: 0.8rem;
+            }
+            .guide-header {
+                padding: 1rem;
+            }
+            .guide-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                margin-right: 0.6rem;
+            }
+            .guide-title {
+                font-size: 1.1rem;
+            }
+            .guide-subtitle {
+                font-size: 0.75rem;
+            }
+            .guide-info {
+                font-size: 0.7rem;
+            }
+            .guide-content.expanded {
+                padding: 1.2rem;
+            }
+            .guide-content h3 {
+                font-size: 1.1rem;
+            }
+            .guide-content p, .guide-content ul {
+                font-size: 0.8rem;
+            }
+            .meta-text {
+                font-size: 0.85rem;
+            }
+
+            /* Responsividade para o bloco de upsell */
+            .upsell-block {
+                padding: 1.5rem;
+                margin: 1.5rem 0.5rem;
+            }
+            .upsell-title {
+                font-size: 1.6rem;
+                flex-direction: column;
+            }
+            .upsell-title i {
+                font-size: 1.8rem;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            .upsell-description {
+                font-size: 0.9rem;
+            }
+            .upsell-button {
+                font-size: 1rem;
+                padding: 0.8rem 1.6rem;
+                flex-direction: column;
+            }
+            .upsell-button i {
+                font-size: 1.2rem;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            .upsell-value-prop {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Sua Jornada de Renda Online</h1>
+            <p>A Expertise para sua Independência Financeira. Descubra Estratégias Comprovadas para uma Renda Sólida e Duradoura.</p>
+        </header>
+
+        <section class="graph-section">
+            <h2 class="graph-title">Análise Estratégica: Investimento e Potencial de Lucro</h2>
+            <div class="graph-bar-container">
+                <div class="graph-bar-fill"></div>
+            </div>
+            <div class="graph-labels">
+                <span>Investimento Mínimo</span>
+                <span>Baixo Risco</span>
+                <span>Médio Risco</span>
+                <span>Alto Retorno</span>
+            </div>
+            <p class="potential-profit">
+                <i class="fas fa-chart-line"></i> Potencial Estratégico: Lucros que Superam R$ 1.000/Semana!
+            </p>
+        </section>
+
+        <section class="guide-list">
+            <!-- Guia 1 - Desapegue e Lucre -->
+            <div class="guide-item" data-investment="zero">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">1</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Desapegue e Lucre: Ativos Ocultos ao Seu Alcance</h2>
+                            <p class="guide-subtitle">Converte itens sem uso em capital imediato, sem investimento.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-coins"></i> Investimento Zero
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Otimizando Seus Ativos Residuais: Maximizando o Lucro Sem Despesas Iniciais</h3>
+                    <p>Oportunidades financeiras frequentemente residem em recursos subutilizados em seu ambiente. Itens domésticos, vestuário, eletrônicos obsoletos — todos representam valor monetário latente. A estratégia de "desapegar e lucrar" transcende a mera transação; ela otimiza seu espaço e contribui para um ciclo econômico sustentável.</p>
+
+                    <p>Este guia detalha um roteiro para identificar e monetizar esses bens, estabelecendo um fluxo de caixa imediato, sem qualquer capital inicial. Inicie sua jornada lucrativa hoje, com os recursos que já possui.</p>
+
+                    <h3>Plataformas de Disseminação: Acesso Direto ao Mercado Comprador</h3>
+                    <ul>
+                        <li><strong>OLX:</strong> Uma plataforma robusta para bens de consumo duráveis. Sua vasta audiência facilita negociações diretas e eficientes.</li>
+                        <li><strong>Facebook Marketplace:</strong> Integrado a uma vasta rede social, ideal para transações rápidas e localizadas, promovendo interações seguras com compradores regionais.</li>
+                        <li><strong>Grupos Especializados (WhatsApp/Telegram):</strong> Comunidades de desapego oferecem um canal de vendas baseado em confiança e indicações, agilizando o processo.</li>
+                        <li><strong>Enjoei (Especializado em Moda):</strong> Para itens de vestuário e acessórios de valor agregado, a plataforma oferece uma curadoria que valoriza sua oferta.</li>
+                        <li><strong>Mercado Livre:</strong> Proporciona alcance nacional. É crucial analisar as taxas para otimizar a margem de lucro.</li>
+                    </ul>
+
+                    <h3>Estratégias de Apresentação: Convertendo Visualizações em Vendas</h3>
+                    <p>Um anúncio otimizado é fundamental para o sucesso. Considere os seguintes princípios:</p>
+                    <ul>
+                        <li><strong>Qualidade Visual:</strong> Utilize iluminação natural, múltiplos ângulos e detalhes claros. Um fundo neutro realça o produto.</li>
+                        <li><strong>Titulação Precisa e Persuasiva:</strong> Inclua palavras-chave e informações cruciais (marca, modelo, condição).</li>
+                        <li><strong>Descrição Abrangente:</strong> Detalhe funcionalidades, dimensões e histórico. A transparência sobre imperfeições minimiza objeções.</li>
+                        <li><strong>Precificação Estratégica:</strong> Pesquise o valor de mercado e estabeleça um preço com margem para negociação. Flexibilidade na negociação é uma vantagem.</li>
+                        <li><strong>Logística:</strong> Comunique claramente as opções de retirada ou entrega, e eventuais custos.</li>
+                    </ul>
+
+                    <h3>Gestão de Transações e Mitigação de Riscos: Priorizando a Segurança</h3>
+                    <p>A segurança é imperativa em todas as transações. Adote as seguintes precauções:</p>
+                    <ul>
+                        <li><strong>Pontos de Encontro Seguros:</strong> Prefira locais públicos e movimentados para entregas pessoais.</li>
+                        <li><strong>Confidencialidade de Dados:</strong> Evite divulgar informações pessoais ou bancárias antes da confirmação do pagamento.</li>
+                        <li><strong>Pagamentos Verificados:</strong> Priorize Pix ou dinheiro. Confirme transferências antes da entrega. Desconfie de métodos com risco de fraude.</li>
+                        <li><strong>Suporte:</strong> Se possível, realize encontros acompanhado.</li>
+                        <li><strong>Análise de Risco:</strong> Confie em sua intuição. Qualquer sinal de irregularidade deve levar à interrupção da negociação.</li>
+                    </ul>
+                    <p>Ao implementar estas diretrizes, você estará apto a transformar seus ativos ociosos em uma fonte de renda significativa. O potencial é tangível e a ausência de investimento inicial representa uma vantagem competitiva. Inicie a monetização de seus bens e observe o retorno financeiro.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Lucrar até R$ 1.000/semana com ativos residuais.</p>
+                </div>
+            </div>
+
+            <!-- Guia 2 - Mineração no Marketplace -->
+            <div class="guide-item" data-investment="baixo">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">2</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Mineração no Marketplace: Desvendando Oportunidades Lucrativas</h2>
+                            <p class="guide-subtitle">Adquira produtos com valor subestimado e maximize seu retorno na revenda.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-dollar-sign"></i> Baixo Investimento
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Arbitragem de Mercado Simplificada: Aquisição Estratégica e Revenda Otimizada</h3>
+                    <p>Identificar ativos com preços abaixo do mercado e capitalizar na revenda é a essência da "Mineração no Marketplace". Esta prática envolve uma análise perspicaz das flutuações de valor, transformando itens convencionais em investimentos lucrativos. Você atuará como um analista de mercado, convertendo oportunidades latentes em lucros substanciais com um capital inicial mínimo.</p>
+
+                    <p>Este guia oferece uma metodologia para navegar neste ecossistema, capacitando-o a identificar e transacionar produtos que aguardam uma valorização eficiente.</p>
+
+                    <h3>Ecossistemas de Oportunidade: Onde Focar Sua Prospecção</h3>
+                    <ul>
+                        <li><strong>Facebook Marketplace:</strong> Um ambiente dinâmico para ofertas de rápida liquidação. Utilize filtros de preço e data para otimizar a busca.</li>
+                        <li><strong>OLX:</strong> Uma vasta base de dados de ofertas. Configure alertas para termos de alta demanda e baixo custo.</li>
+                        <li><strong>Plataformas de E-commerce (Shopee/AliExpress):</strong> Para aquisição de produtos novos a custo de atacado, com potencial de revenda no varejo.</li>
+                        <li><strong>Mercados Físicos (Brechós/Feiras):</strong> Não subestime o potencial de valorização de itens em mercados secundários físicos.</li>
+                        <li><strong>Redes Comunitárias:</strong> Grupos de desapego locais frequentemente apresentam ofertas vantajosas devido à urgência de venda.</li>
+                    </ul>
+
+                    <h3>Identificação e Valoração de Oportunidades: Maximizando o Potencial de Lucro</h3>
+                    <p>A inteligência de mercado é a chave. Priorize a pesquisa e a análise:</p>
+                    <ul>
+                        <li><strong>Análise de Preço:</strong> Compare o custo de aquisição com o preço médio de revenda em plataformas correlatas para assegurar uma margem viável.</li>
+                        <li><strong>Motivação do Vendedor:</strong> A urgência de venda pode indicar flexibilidade na negociação.</li>
+                        <li><strong>Reparos de Baixo Custo:</strong> Itens com pequenas imperfeições reparáveis representam oportunidades de valorização significativa.</li>
+                        <li><strong>Tendências de Mercado:</strong> Monitore o cenário de consumo para identificar produtos com demanda crescente.</li>
+                        <li><strong>Itens Essenciais:</strong> Eletrodomésticos, mobiliário básico, eletrônicos populares (smartphones, tablets). Esses itens sempre têm demanda.</li>
+                    </ul>
+
+                    <h3>Técnicas de Revenda Otimizada: Gerando Confiança e Lucro</h3>
+                    <p>A apresentação do produto é crucial para a conversão de vendas:</p>
+                        <li><strong>Recondicionamento:</strong> A higienização e pequenos reparos elevam substancialmente o valor percebido do item. Documente o processo.</li>
+                        <li><strong>Imagens de Alta Qualidade:</strong> Utilize princípios de fotografia profissional para destacar o produto.</li>
+                        <li><strong>Descrição Persuasiva:</strong> Enfatize o valor agregado e os benefícios para o comprador.</li>
+                        <li><strong>Multi-canalidade na Venda:</strong> Utilize diversas plataformas para ampliar a visibilidade.</li>
+                        <li><strong>Precificação Dinâmica:</strong> Estabeleça um preço competitivo com flexibilidade para negociação, mas mantenha sua margem mínima.</li>
+                        <li><strong>Protocolos de Segurança:</strong> Priorize encontros em locais públicos e métodos de pagamento seguros.</li>
+                    </ul>
+                    <p>A "Mineração no Marketplace" é uma disciplina de análise e execução. Ao refinar sua capacidade de identificar e transacionar ativos subvalorizados, você pode consolidar um fluxo de renda semanal que transcende os R$ 1.000, estabelecendo as bases para uma liberdade financeira duradoura.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Alcançar R$ 1.000/semana via arbitragem de mercado.</p>
+                </div>
+            </div>
+
+            <!-- Guia 3 - Artesanato no TikTok -->
+            <div class="guide-item" data-investment="baixo">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">3</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Artesanato no TikTok: Monetizando sua Expressão Criativa</h2>
+                            <p class="guide-subtitle">Converta suas criações artesanais em conteúdo viral e vendas diretas.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-paint-brush"></i> Baixo Investimento
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>O Ecossistema DIY no TikTok: Sua Marca, Sua Audiência, Sua Renda</h3>
+                    <p>O TikTok, além de uma plataforma de entretenimento, representa um vasto canal para criadores e artesãos. Se sua habilidade reside na confecção de peças singulares – seja por meio de crochê, pintura, joalheria, ou outras artes manuais –, o TikTok oferece uma vitrine incomparável para sua produção. Com um investimento inicial limitado aos materiais, você pode alcançar milhões, cultivar uma comunidade engajada e escalar suas vendas exponencialmente.</p>
+
+                    <p>Este guia detalha a metodologia para transformar sua expertise artesanal em conteúdo viral, capturando a atenção do público e convertendo essa interação em transações comerciais, diretamente de seu espaço criativo.</p>
+
+                    <h3>Categorias de Artesanato com Alta Projeção no TikTok: Inspire-se para Lucrar</h3>
+                    <p>Priorize itens visualmente atraentes e com apelo à personalização:</p>
+                    <ul>
+                        <li><strong>Resina Epóxi:</strong> Chaveiros, porta-copos, objetos decorativos. O processo de cura da resina é intrinsecamente visual.</li>
+                        <li><strong>Velas Artesanais:</strong> Velas com designs e fragrâncias exclusivas. O processo de derretimento e aromatização gera vídeos envolventes.</li>
+                        <li><strong>Tricô/Crochê:</strong> Amigurumis, vestuário, acessórios. Vídeos de "processo" e "resultado final" demonstram valor e habilidade.</li>
+                        <li><strong>Arte e Decoração Minimalista:</strong> Pinturas abstratas, quadros com tipografia personalizada, itens de decoração para nichos específicos.</li>
+                        <li><strong>Acessórios Personalizados:</strong> Bijuterias, tiaras, itens com customização manual. Demonstre o processo de criação e as possibilidades de estilo.</li>
+                        <li><strong>Artigos de Papelaria Customizados:</strong> Cadernos, canetas, objetos de mesa com intervenções artísticas.</li>
+                    </ul>
+
+                    <h3>Desenvolvimento de Conteúdo Viral no TikTok: Maximizando o Engajamento</h3>
+                    <p>O TikTok exige dinamismo e engajamento nos primeiros segundos. Otimize seus vídeos com as seguintes abordagens:</p>
+                    <ul>
+                        <li><strong>Processo Criativo (ASMR/Time-lapse):</strong> O público é cativado pela visualização do processo "Faça Você Mesmo". Capture a produção em time-lapse ou com sons ASMR.</li>
+                        <li><strong>Narrativa Persuasiva:</strong> Apresente o problema que sua arte resolve ou a inspiração por trás da criação.</li>
+                        <li><strong>Tendências de Áudio:</strong> Utilize trilhas sonoras e áudios em alta para aumentar a visibilidade.</li>
+                        <li><strong>Legendas Concisas:</strong> Frases de impacto que instiguem a curiosidade e convidem à ação.</li>
+                        <li><strong>Hashtags Otimizadas:</strong> Combine hashtags amplas com termos específicos do seu nicho e tendências.</li>
+                        <li><strong>Chamada para Ação (CTA) Direta:</strong> Direcione o público para o link de compra ou contato.</li>
+                        <li><strong>Consistência na Publicação:</strong> A frequência é crucial para manter o algoritmo engajado e a audiência cativada.</li>
+                    </ul>
+
+                    <h3>Estratégias de Conversão: Transformando Visualizações em Vendas Concretas</h3>
+                    <p>A monetização da audiência é o objetivo primordial:</p>
+                    <ul>
+                        <li><strong>Link na Bio como Vitrine:</strong> Direcione o tráfego para sua loja virtual (WhatsApp Business, Linktree, Shopee, Elo7, Instagram Shopping).</li>
+                        <li><strong>Lives e Interação:</strong> Realize sessões ao vivo para demonstrar o processo, responder a dúvidas e aceitar encomendas personalizadas.</li>
+                        <li><strong>Ofertas e Incentivos Exclusivos:</strong> Crie um senso de urgência ou de oportunidade (brindes, combos).</li>
+                        <li><strong>Parcerias Estratégicas:</strong> Colaborações com microinfluenciadores podem amplificar seu alcance.</li>
+                        <li><strong>Prova Social:</strong> Incentive e utilize depoimentos de clientes satisfeitos para construir confiança.</li>
+                        <li><strong>Conteúdo "Satisfatório":</strong> Vídeos que mostram o "antes e depois" ou o unboxing de peças prontas geram alto potencial viral.</li>
+                        <li><strong>Desenvolvimento de Marca:</strong> Estabeleça uma identidade visual e um nome para seu ateliê para profissionalizar seu negócio.</li>
+                    </ul>
+                    <p>Com o TikTok, sua arte transcende o hobby, consolidando-se como um empreendimento lucrativo e gratificante. A plataforma oferece visibilidade; sua criatividade concretiza o sucesso. Inicie hoje a transição de suas ideias para vídeos que encantam e monetizam.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Lucrar até R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 4 - Freelancer Iniciante -->
+            <div class="guide-item" data-investment="zero">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">4</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Freelancer Iniciante: Oportunidades no Cenário Autônomo</h2>
+                            <p class="guide-subtitle">Inicie sua jornada no trabalho autônomo e conquiste flexibilidade financeira.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-keyboard"></i> Investimento Zero
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Autonomia Profissional: Roteiro para o Sucesso no Freelancing</h3>
+                    <p>A flexibilidade, a capacidade de operar remotamente e a autonomia na gestão de projetos são pilares do freelancing contemporâneo. Este modelo de trabalho, que envolve a prestação de serviços por projeto a múltiplos clientes, oferece controle total sobre sua agenda e rendimentos. Independentemente de sua experiência prévia, a demanda por habilidades básicas é crescente, tornando este um campo acessível para iniciantes.</p>
+
+                    <p>Este guia propicia o conhecimento fundamental para navegar no ecossistema freelancer, detalhando plataformas, serviços de alta demanda para iniciantes e estratégias para se diferenciar em um mercado que valoriza proatividade e qualidade. Prepare-se para edificar sua independência financeira, um projeto por vez.</p>
+
+                    <h3>Plataformas de Conexão: Onde Iniciar Sua Carteira de Clientes</h3>
+                    <p>Múltiplas plataformas conectam freelancers a oportunidades. Priorize aquelas com interface amigável para iniciantes e foco em serviços simplificados:</p>
+                    <ul>
+                        <li><strong>Fiverr:</strong> Reconhecida por "gigs" (micro-serviços). Defina sua oferta e preço, permitindo que clientes o encontrem.</li>
+                        <li><strong>Workana:</strong> Forte na América Latina, oferece uma gama diversificada de projetos. Permite o envio de propostas diretas aos clientes.</li>
+                        <li><strong>99Freelas:</strong> Plataforma brasileira com volume significativo de projetos. Ideal para o mercado nacional.</li>
+                        <li><strong>Upwork:</strong> Gigante global com oportunidades variadas, incluindo tarefas para iniciantes.</li>
+                        <li><strong>GetNinjas:</strong> Para serviços amplos, de digitação a suporte administrativo. Facilita a prospecção por proximidade e categoria.</li>
+                        <li><strong>Redes Sociais Profissionais (Facebook/LinkedIn):</strong> Grupos especializados frequentemente divulgam vagas. Mantenha-se ativo e engajado.</li>
+                    </ul>
+
+                    <h3>Serviços de Baixa Barreira de Entrada: Monetizando Habilidades Fundamentais</h3>
+                    <p>O lucro é acessível mesmo sem expertise avançada. Comece com as seguintes competências:</p>
+                    <ul>
+                        <li><strong>Digitação e Transcrição:</strong> Converta áudios/vídeos em texto, ou digite documentos. Requer precisão e agilidade.</li>
+                        <li><strong>Assistência Virtual:</strong> Gestão de e-mails, agendas, planilhas básicas, agendamentos. Alta demanda entre pequenos empresários.</li>
+                        <li><strong>Pesquisa Online:</strong> Compilação de informações, análise de mercado. Requer proficiência em busca digital.</li>
+                        <li><strong>Criação de Conteúdo Básico:</strong> Desenvolvimento de posts curtos para mídias sociais, descrições de produtos, resumos.</li>
+                        <li><strong>Tradução Simplificada:</strong> Para bilíngues com bom domínio de um segundo idioma, traduções pontuais representam uma fonte de renda.</li>
+                        <li><strong>Revisão Textual:</strong> Correção gramatical e ortográfica de documentos e publicações.</li>
+                        <li><strong>Entrada de Dados:</strong> Inserção sistemática de informações em bancos de dados ou planilhas.</li>
+                    </ul>
+
+                    <h3>Diferenciação e Aquisição de Clientes: Estratégias para Iniciantes</h3>
+                    <p>A competitividade exige diferenciação. Adote estas estratégias:</p>
+                    <ul>
+                        <li><strong>Perfil Otimizado:</strong> Imagem profissional, biografia detalhada e destaque de habilidades e entusiasmo.</li>
+                        <li><strong>Portfólio Base:</strong> Crie "projetos-teste" para demonstrar capacidade e gerar exemplos.</li>
+                        <li><strong>Precificação Inicial:</strong> Ofereça valores competitivos para atrair os primeiros clientes e avaliações.</li>
+                        <li><strong>Comunicação Eficaz:</strong> Responda prontamente, com clareza e interesse no projeto.</li>
+                        <li><strong>Feedback:</strong> Solicite avaliações após cada projeto; são seu maior ativo.</li>
+                        <li><strong>Proatividade na Prospecção:</strong> Busque ativamente projetos alinhados às suas habilidades.</li>
+                        <li><strong>Investimento em Qualificação:</strong> Aprofunde-se em uma habilidade específica por meio de cursos online gratuitos.</li>
+                        <li><strong>Gestão e Pontualidade:</strong> Cumpra prazos, entregue com qualidade e comunique imprevistos. A confiança é primordial.</li>
+                    </ul>
+                    <p>O início no freelancing é uma fase de contínuo aprendizado e expansão. Cada projeto é uma oportunidade para refinar suas competências e consolidar sua reputação. Com a aplicação destas diretrizes, você pode superar os R$ 1.000 semanais, abrindo caminho para uma trajetória profissional de sucesso e liberdade.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Faturar até R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 5 - Afiliado Orgânico -->
+            <div class="guide-item" data-investment="zero">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">5</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Afiliado Orgânico: Gerando Receita Sem Investimento em Anúncios</h2>
+                            <p class="guide-subtitle">Maximize comissões por meio de estratégias de marketing de influência.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-link"></i> Investimento Zero
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Marketing de Afiliados sem Despesas: Otimizando Suas Comissões</h3>
+                    <p>Imagine auferir comissões substanciais promovendo produtos de sua confiança, sem qualquer investimento em publicidade. O marketing de afiliados orgânico é a materialização dessa possibilidade, onde a propagação digital e sua influência pessoal são os motores do sucesso. Sua função é conectar consumidores a soluções relevantes, sendo remunerado por cada conversão, sem a necessidade de desenvolvimento de produto, gestão de estoque ou logística.</p>
+
+                    <p>Este guia desmistifica o marketing de afiliados, detalhando estratégias gratuitas para a construção de uma audiência engajada e a conversão efetiva de sua rede em uma máquina de vendas, sem sair de casa e sem despesas iniciais.</p>
+
+                    <h3>Seleção Estratégica de Produtos: Otimizando seu Potencial de Lucro</h3>
+                    <p>A escolha do produto é um fator preponderante. Opte por nichos de seu domínio ou interesse, garantindo autenticidade em sua promoção:</p>
+                    <ul>
+                        <li><strong>Hotmart:</strong> Principal plataforma de produtos digitais da América Latina (cursos, e-books, mentorias).</li>
+                        <li><strong>Eduzz:</strong> Ampla variedade de produtos digitais, com interface intuitiva.</li>
+                        <li><strong>Monetizze:</strong> Oferta tanto produtos digitais quanto físicos, permitindo diversificação.</li>
+                        <li><strong>Kiwi:</strong> Plataforma emergente com produtos de alta qualidade.</li>
+                        <li><strong>Análise da Página de Vendas:</strong> Verifique a profissionalismo e persuasão da página de vendas do produto.</li>
+                        <li><strong>Comissão:</strong> Priorize produtos com comissões atrativas (acima de 40% é recomendável).</li>
+                        <li><strong>Suporte ao Afiliado:</strong> Verifique a disponibilidade de materiais de apoio (textos, imagens) do produtor.</li>
+                    </ul>
+
+                    <h3>Estratégias de Divulgação Orgânica: Conectando e Convertendo</h3>
+                    <p>Concentre-se na criação de conteúdo de valor e na construção de relacionamentos:</p>
+                    <ul>
+                        <li><strong>Instagram (Stories/Reels):</strong> Crie conteúdo relevante ao produto (dicas, tutoriais, resultados). Utilize enquetes e CTAs.</li>
+                        <li><strong>Grupos de Redes Sociais:</strong> Participe ativamente em grupos do seu nicho, oferecendo valor antes da promoção. Evite spam.</li>
+                        <li><strong>WhatsApp e Listas de Transmissão:</strong> Crie listas segmentadas com dicas e ofertas, utilizando o WhatsApp Business para gestão de contatos.</li>
+                        <li><strong>TikTok (Conteúdo Educacional/Inspiracional):</strong> Produza vídeos curtos demonstrando os benefícios do produto, utilizando tendências e chamadas claras.</li>
+                        <li><strong>YouTube (Reviews/Tutoriais):</strong> Crie vídeos de análise honesta, tutoriais ou relatos de experiência pessoal.</li>
+                        <li><strong>Blogs e Artigos Gratuitos:</strong> Desenvolva conteúdo que solucione problemas da audiência, integrando o produto como solução completa.</li>
+                    </ul>
+
+                    <h3>Técnicas de Construção de Confiança e Vendas Iniciais</h3>
+                    <p>A confiança é a base do marketing de afiliados orgânico. Sem ela, não há vendas:</p>
+                    <ul>
+                        <li><strong>Autoridade no Nicho:</strong> Posicione-se como um conhecedor do assunto, mesmo sem ser um expert.</li>
+                        <li><strong>Geração de Valor:</strong> Ofereça conteúdo útil e gratuito antes de propor a venda.</li>
+                        <li><strong>Gatilhos Mentais (Éticos):</strong> Utilize escassez, prova social e autoridade de forma transparente.</li>
+                        <li><strong>Autenticidade:</strong> Crie conteúdo original, com sua própria voz.</li>
+                        <li><strong>Interação Ativa:</strong> Responda a dúvidas e esteja disponível como consultor.</li>
+                        <li><strong>Bônus Agregados:</strong> Considere oferecer bônus exclusivos para quem comprar através do seu link.</li>
+                        <li><strong>Monitoramento de Links:</strong> Acompanhe as métricas de cliques e vendas para otimizar suas estratégias.</li>
+                    </ul>
+                    <p>O marketing de afiliados orgânico é uma jornada que exige consistência, mas oferece retornos significativos. Com a dedicação em gerar valor e construir relacionamentos, suas comissões crescerão sem a necessidade de investimentos em anúncios. Posicione-se para atingir R$ 1.000 por semana e construir um empreendimento digital robusto.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Alcançar R$ 1.000/semana sem investimento.</p>
+                </div>
+            </div>
+
+            <!-- Guia 6 - Design com Canva -->
+            <div class="guide-item" data-investment="baixo">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">6</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Design com Canva: Monetizando a Simplicidade Criativa</h2>
+                            <p class="guide-subtitle">Produza designs profissionais e construa uma fonte de renda sólida.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-palette"></i> Baixo Investimento
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Oportunidades no Design Acessível: Faturando com o Canva</h3>
+                    <p>A crença de que design gráfico profissional exige softwares complexos ou anos de formação é obsoleta. O Canva democratizou a criação visual, permitindo que qualquer indivíduo, sem expertise técnica avançada, produza designs profissionais em minutos. Logotipos, posts para mídias sociais, materiais promocionais – a demanda por presença visual é massiva e você pode ser a solução, capitalizando no poder do Canva.</p>
+
+                    <p>Este guia detalha como integrar o Canva em sua operação principal, oferecendo serviços gráficos a pequenas e médias empresas, empreendedores e marcas estabelecidas. Com um investimento inicial mínimo (a versão gratuita já é robusta), o potencial de lucro é ilimitado. Prepare-se para ser um pilar visual para inúmeros negócios e edificar sua autonomia financeira.</p>
+
+                    <h3>Otimizando o Canva: Alavancando a Ferramenta para Ganhos</h3>
+                    <p>A proficiência no Canva, combinada com uma estratégia de negócios, é crucial:</p>
+                    <ul>
+                        <li><strong>Templates Versáteis:</strong> Utilize a vasta biblioteca de templates como ponto de partida, personalizando cores, fontes e imagens conforme a identidade do cliente.</li>
+                        <li><strong>Recursos Gratuitos vs. Pro:</strong> Explore a biblioteca de elementos. Considere o Canva Pro para recursos avançados e maior liberdade criativa, um investimento com alto ROI.</li>
+                        <li><strong>Funcionalidades Essenciais:</strong> Domine ferramentas de alinhamento, camadas, agrupamento, efeitos de texto e remoção de fundo.</li>
+                        <li><strong>Branding Kit:</strong> Utilize o Branding Kit (Canva Pro) para manter a consistência visual em projetos recorrentes, otimizando o fluxo de trabalho.</li>
+                        <li><strong>Mockups:</strong> Apresente seus designs de forma profissional, simulando o produto final em mockups.</li>
+                        <li><strong>Colaboração:</strong> Compartilhe projetos com clientes para feedbacks em tempo real, otimizando a comunicação.</li>
+                    </ul>
+
+                    <h3>Portfólio de Serviços: Ofertas de Design para Iniciantes</h3>
+                    <p>A demanda por design é constante e abrange diversas necessidades:</p>
+                    <ul>
+                        <li><strong>Logotipos Simplificados:</strong> Desenvolva identidades visuais básicas para novos negócios.</li>
+                        <li><strong>Conteúdo para Redes Sociais:</strong> Produza posts e stories para Instagram, Facebook, LinkedIn.</li>
+                        <li><strong>Materiais Promocionais:</strong> Crie flyers digitais e impressos, cartões de visita, banners.</li>
+                        <li><strong>Cartões de Visita (Virtuais/Físicos):</strong> Soluções práticas para profissionais.</li>
+                        <li><strong>Apresentações Corporativas:</strong> Desenvolva slides visualmente impactantes para empresas e palestrantes.</li>
+                        <li><strong>E-books e Infográficos:</strong> Crie a diagramação e o design visual para produtos digitais.</li>
+                        <li><strong>Banners para Web:</strong> Designs atrativos para sites e blogs.</li>
+                    </ul>
+
+                    <h3>Prospecção e Precificação: Alcançando Seus Clientes Ideais</h3>
+                    <p>Seus clientes potenciais estão dispersos. Saiba como identificá-los e abordá-los:</p>
+                    <ul>
+                        <li><strong>Redes Sociais Profissionais:</strong> Construa um portfólio visual no Instagram e LinkedIn, conectando-se com empreendedores.</li>
+                        <li><strong>Plataformas de Freelance:</strong> Fiverr, Workana, 99Freelas são canais eficazes para encontrar clientes em busca de design acessível.</li>
+                        <li><strong>Indicações:</strong> Clientes satisfeitos são sua melhor publicidade. Implemente um programa de indicações.</li>
+                        <li><strong>Parcerias Estratégicas:</strong> Ofereça serviços a influenciadores digitais em troca de exposição.</li>
+                        <li><strong>Abordagem Direta:</strong> Identifique negócios com potencial de melhoria visual e proponha uma "consultoria" gratuita.</li>
+                        <li><strong>Marketing de Conteúdo:</strong> Produza artigos ou posts com dicas de design, atraindo leads qualificados.</li>
+                        <li><strong>Estruturação de Pacotes:</strong> Ofereça pacotes de serviços (e.g., 5 posts + 1 logo) para aumentar o valor percebido e seu faturamento.</li>
+                    </ul>
+                    <p>O Canva é sua porta de entrada para o lucrativo mercado de design. Com ele, você pode não apenas gerar R$ 1.000 semanais, mas também construir uma carreira flexível e robusta, impactando negócios com sua criatividade. Comece hoje a conceber e monetizar sua arte visual.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Faturar até R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 7 - Vendedor Freelancer de Alta Performance -->
+            <div class="guide-item" data-investment="zero">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">7</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Vendedor Freelancer de Alta Performance: Escalando Receita</h2>
+                            <p class="guide-subtitle">Eleve seu desempenho autônomo e multiplique seus ganhos de forma exponencial.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-chart-line"></i> Investimento Zero
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Da Base ao Topo: Sua Ascensão no Freelancing de Alta Performance</h3>
+                    <p>Após consolidar seus passos iniciais no freelancing e experimentar a autonomia, é tempo de transcender. Este guia é para profissionais que aspiram a transicionar de meros "prestadores de serviço" para "conquistadores de clientes de alto valor", otimizando seus ganhos e estabelecendo-se como autoridades em suas respectivas áreas. A meta não é apenas intensificar o volume de trabalho, mas aprimorar a inteligência estratégica e a valorização de suas competências.</p>
+
+                    <p>Prepare-se para aprender técnicas avançadas de negociação, fidelização e posicionamento que farão com que clientes de alto calibre busquem ativamente seus serviços. Se a marca de R$ 1.000 semanais já é uma realidade, este guia fornecerá as ferramentas para escalar seus resultados, transformando seu negócio freelancer em uma entidade de lucro e reconhecimento.</p>
+
+                    <h3>Fechamento e Negociação Avançados: Otimizando Suas Conversões</h3>
+                    <p>A negociação transcende o preço; trata-se de agregar valor e demonstrar o ROI (Retorno sobre Investimento) ao cliente.</p>
+                    <ul>
+                        <li><strong>Análise Profunda da Necessidade do Cliente:</strong> Compreenda o "porquê" por trás da demanda do serviço, não apenas o "o quê".</li>
+                        <li><strong>Proposta de Valor Baseada em Soluções:</strong> Articule como seus serviços resolvem problemas específicos do cliente, gerando benefícios tangíveis.</li>
+                        <li><strong>Justificativa de Preço pelo Valor Agregado:</strong> Demonstre o impacto financeiro positivo que seu trabalho trará, estabelecendo uma relação custo-benefício clara.</li>
+                        <li><strong>Estruturação de Pacotes de Serviços (Upsell/Cross-sell):</strong> Ofereça soluções completas que agreguem valor e ampliem o ticket médio.</li>
+                        <li><strong>Técnicas de Fechamento Direto:</strong> Utilize perguntas que conduzam o cliente à decisão de contratação.</li>
+                        <li><strong>Controle da Interação:</strong> Conduza a negociação com confiança e profissionalismo, antecipando objeções e apresentando soluções.</li>
+                        <li><strong>Garantias de Desempenho (se aplicável):</strong> A oferta de garantias pode ser um diferencial competitivo.</li>
+                        <li><strong>Evidências Sociais:</strong> Apresente depoimentos de clientes, cases de sucesso e dados que validem seus resultados.</li>
+                    </ul>
+
+                    <h3>Posicionamento Estratégico: Atraindo Clientes de Alto Valor</h3>
+                    <p>Sua reputação é seu ativo mais valioso. Invista nela:</p>
+                    <ul>
+                        <li><strong>Nicho de Mercado:</strong> Especializa-se em uma área específica para um segmento de clientes, tornando-se referência.</li>
+                        <li><strong>Produção de Conteúdo Autoritário:</strong> Publique artigos, vídeos e posts que demonstrem sua expertise no nicho.</li>
+                        <li><strong>Engajamento em Comunidades Profissionais:</strong> Participe ativamente em fóruns e grupos online, oferecendo insights e colaboração.</li>
+                        <li><strong>Portfólio Premium:</strong> Desenvolva um portfólio visualmente impecável, destacando projetos de sucesso e resultados concretos.</li>
+                        <li><strong>Branding Pessoal Consistente:</strong> Mantenha uma imagem profissional e unificada em todas as suas plataformas.</li>
+                        <li><strong>Networking Qualificado:</strong> Estabeleça conexões com outros profissionais e agências para potenciais indicações.</li>
+                        <li><strong>Depoimentos em Vídeo:</strong> Incentive clientes satisfeitos a gravar depoimentos, que possuem maior impacto.</li>
+                    </ul>
+
+                    <h3>Fidelização e Receita Recorrente: Estratégias de Longo Prazo</h3>
+                    <p>Manter um cliente é mais eficiente que adquirir um novo:</p>
+                    <ul>
+                        <li><strong>Comunicação Transparente:</strong> Mantenha o cliente informado sobre o andamento do projeto e antecipe soluções para imprevistos.</li>
+                        <li><strong>Entrega de Valor Excedente:</strong> Ofereça um "extra" que supere as expectativas, gerando uma experiência memorável.</li>
+                        <li><strong>Pontualidade:</strong> Cumpra rigorosamente os prazos estabelecidos.</li>
+                        <li><strong>Pós-Venda Ativo:</strong> Realize follow-ups para assegurar a satisfação e identificar novas necessidades.</li>
+                        <li><strong>Feedback Contínuo:</strong> Solicite e utilize feedback para aprimoramento constante.</li>
+                        <li><strong>Oferta de Suporte Contínuo:</strong> Proponha planos de manutenção ou suporte mensal para serviços que permitam receita recorrente.</li>
+                        <li><strong>Parceria Estratégica:</strong> Demonstre interesse genuíno no sucesso do cliente, atuando como consultor.</li>
+                    </ul>
+                    <p>A transição para um Vendedor Freelancer de Alta Performance é uma decisão estratégica que redefinirá sua trajetória profissional. Dominando estas técnicas, você não apenas escalará seu faturamento para muito além de R$ 1.000 semanais, mas também construirá uma carreira sólida, respeitada e com autonomia total. Seu sucesso futuro está agora sob seu controle.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Aumentar faturamento além dos R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 8 - Trader de Milhas -->
+            <div class="guide-item" data-investment="intermediario">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">8</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Trader de Milhas: Otimizando Ativos de Viagem para Lucro</h2>
+                            <p class="guide-subtitle">Converta pontos de cartão de crédito em capital lucrativo e multiplique seu patrimônio.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-plane"></i> Investimento Intermediário
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Monetização de Milhas Aéreas: Dominando o Trading de Sucesso</h3>
+                    <p>Os pontos acumulados em cartões de crédito e programas de fidelidade representam um ativo financeiro subutilizado, com alto potencial de monetização. O mercado de milhas aéreas é um dos segmentos mais dinâmicos e lucrativos, acessível mesmo para não-viajantes frequentes. Atuar como "Trader de Milhas" implica na compreensão das flutuações de valor, na identificação de oportunidades de aquisição a baixo custo e na revenda com margens otimizadas, convertendo potenciais viagens em lucros tangíveis.</p>
+
+                    <p>Este guia desvenda os fundamentos deste mercado, demonstrando como acumular milhas de forma estratégica, onde efetuar a venda com segurança e como calcular seus rendimentos para atingir a meta de R$ 1.000 semanais. Inicie sua jornada lucrativa, expandindo seu capital a partir de seus próprios ativos.</p>
+
+                    <h3>Estrutura do Mercado de Milhas: Dinâmica de Pontos e Tarifas Aéreas</h3>
+                    <p>A compreensão da mecânica do mercado é essencial para o sucesso do trader:</p>
+                    <ul>
+                        <li><strong>Distinção Milhas vs. Pontos:</strong> Milhas são unidades em programas de companhias aéreas (Smiles, Latam Pass, TudoAzul); Pontos são unidades de programas de fidelidade bancários, transferíveis para milhas.</li>
+                        <li><strong>Programas de Fidelidade Aérea:</strong> Conheça as políticas, validades e promoções de bônus dos principais programas.</li>
+                        <li><strong>Promoções de Transferência:</strong> A chave para a lucratividade reside nas bonificações (50%, 80%, 100% ou mais) em transferências de pontos para milhas.</li>
+                        <li><strong>Oferta e Demanda:</strong> O valor das milhas flutua conforme a sazonalidade e demanda do mercado.</li>
+                        <li><strong>Custos Operacionais:</strong> Considere taxas de transferência e comissões de plataformas de venda no cálculo da margem de lucro.</li>
+                    </ul>
+
+                    <h3>Plataformas de Negociação Seguras: Seus Canais de Transação</h3>
+                    <p>A segurança é primordial. Utilize apenas plataformas de reputação consolidada:</p>
+                    <ul>
+                        <li><strong>HotMilhas:</strong> Reconhecida plataforma para venda de milhas, com prazos de pagamento definidos (1 a 90 dias).</li>
+                        <li><strong>MaxMilhas:</strong> Permite a venda direta de milhas a consumidores, com flexibilidade na precificação e prazo.</li>
+                        <li><strong>Estratégia de Aquisição:</strong> Além da venda, explore a compra de milhas em períodos de baixa para revenda em alta.</li>
+                        <li><strong>Clubes de Fidelidade:</strong> Avalie a adesão a clubes de assinatura (e.g., Clube Smiles) para acesso a milhas com desconto.</li>
+                        <li><strong>Otimização de Acúmulo:</strong> Utilize cartões de crédito com alta pontuação e participe de promoções de compras bonificadas.</li>
+                    </ul>
+
+                    <h3>Cálculo de Margem e Risco: A Disciplina do Trader Inteligente</h3>
+                    <p>A análise quantitativa é a base do sucesso. Calcule antes de agir:</p>
+                    <ul>
+                        <li><strong>Custo por Milha (CPM):</strong> Calcule o custo de geração de cada milha. Ex: (R$ 350 / 20.000 milhas) = R$ 0,0175/milha.</li>
+                        <li><strong>Preço de Venda por Milha (PVM):</strong> Pesquise o valor de mercado (CPM - Custo por Milheiro Vendido). Ex: R$ 22/milheiro = R$ 0,022/milha.</li>
+                        <li><strong>Margem de Lucro:</strong> PVM - CPM. Ex: R$ 0,022 - R$ 0,0175 = R$ 0,0045/milha.</li>
+                        <li><strong>Prazos de Liquidez:</strong> Atente-se aos prazos de pagamento das plataformas para gestão de fluxo de caixa.</li>
+                        <li><strong>Diversificação de Operações:</strong> Distribua suas transações entre diferentes programas e prazos para mitigar riscos.</li>
+                        <li><strong>Validade das Milhas:</strong> Monitore a data de expiração para evitar perdas de capital.</li>
+                        <li><strong>Gerenciamento de Capital:</strong> Invista apenas capital excedente.</li>
+                        <li><strong>Compliance Fiscal:</strong> Consulte um contador para entender as implicações fiscais dos lucros.</li>
+                    </ul>
+                    <p>O trading de milhas é um vetor de renda suplementar que exige estudo e disciplina. Com a paciência para identificar oportunidades e a precisão nos cálculos, você pode transformar este mercado em uma fonte consistente de R$ 1.000 ou mais semanais. Seu potencial de ganhos é ilimitado.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Lucrar até R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 9 - Especialista em Anúncios para Delivery -->
+            <div class="guide-item" data-investment="medio">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">9</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Especialista em Anúncios para Delivery: Conectando Gastronomia e Lucro</h2>
+                            <p class="guide-subtitle">Otimize a visibilidade de restaurantes, impulsione pedidos e maximize faturamento.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-megaphone"></i> Investimento Médio
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Marketing Digital no Setor Delivery: Sua Agência de Performance</h3>
+                    <p>O mercado de delivery experimenta crescimento exponencial, com estabelecimentos gastronômicos competindo por visibilidade em um ambiente digital saturado. A maioria carece de expertise em marketing digital para se destacar. Sua atuação como "Especialista em Anúncios para Delivery" estabelece a ponte entre restaurantes e consumidores, gerando um volume expressivo de pedidos e, consequentemente, impulsionando o faturamento de seus parceiros e o seu próprio.</p>
+
+                    <p>Este guia o capacitará a desenvolver campanhas de anúncios digitais de alta conversão, atraindo um fluxo contínuo de clientes para os serviços de delivery de seus parceiros. O investimento inicial concentra-se em conhecimento e ferramentas básicas, com um potencial de retorno que pode superar R$ 1.000 semanais.</p>
+
+                    <h3>Plataformas de Anúncios Essenciais: Ferramentas de Impacto</h3>
+                    <p>O domínio destas plataformas é fundamental para alcançar seu público-alvo com precisão:</p>
+                    <ul>
+                        <li><strong>Facebook Ads (Meta Ads):</strong> Crucial para delivery. Permite segmentação geográfica (raio de entrega), por interesse e comportamento (usuários de apps de delivery). Crie anúncios com apelo visual.</li>
+                        <li><strong>TikTok Ads:</strong> Ideal para conteúdo viral. Utilize vídeos curtos e dinâmicos demonstrando a preparação de pratos, o ambiente ou depoimentos de clientes.</li>
+                        <li><strong>Google Ads (Pesquisa e Display):</strong> Fundamental para buscas ativas ("pizza perto de mim"). A Rede de Display exibe anúncios visuais em sites e aplicativos de comida.</li>
+                        <li><strong>Google Meu Negócio:</strong> Otimize o perfil do restaurante para buscas locais e Google Maps, gerando tráfego orgânico.</li>
+                        <li><strong>Formatos de Anúncio:</strong>
+                            <ul>
+                                <li><strong>Tráfego para WhatsApp/Direto:</strong> Para pedidos instantâneos.</li>
+                                <li><strong>Tráfego para Site/App:</strong> Direciona para plataformas de pedido próprias.</li>
+                                <li><strong>Engajamento:</strong> Aumenta a interação com ofertas.</li>
+                                <li><strong>Mensagens:</strong> Inicia conversas diretas.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Criação de Anúncios de Alta Conversão: Estimulando o Consumo</h3>
+                    <p>Anúncios de delivery devem ser convidativos e urgentes:</p>
+                    <ul>
+                        <li><strong>Conteúdo Visual de Qualidade:</strong> Invista em imagens e vídeos apetitosos. A comida deve parecer irresistível.</li>
+                        <li><strong>Copywriting Persuasivo:</strong> Utilize termos que ativem o desejo e a urgência ("suculento", "entrega rápida", "peça já!").</li>
+                        <li><strong>Ofertas Claras:</strong> Destaque promoções e descontos exclusivos.</li>
+                        <li><strong>Chamada para Ação (CTA) Direta:</strong> Botões como "Pedir Agora" devem ser visíveis e intuitivos.</li>
+                        <li><strong>Segmentação Precisa:</strong> Crie públicos personalizados e utilize a segmentação por localização para otimizar o alcance.</li>
+                        <li><strong>Testes A/B:</strong> Experimente diferentes versões de anúncios para identificar as mais eficazes.</li>
+                    </ul>
+
+                    <h3>Aquisição e Precificação de Clientes: Sua Expertise em Valor</h3>
+                    <p>O mercado de delivery demanda sua especialização. Apresente-se estrategicamente:</p>
+                    <ul>
+                        <li><strong>Prospecção Local:</strong> Visite estabelecimentos e identifique necessidades de marketing. Apresente um material de impacto.</li>
+                        <li><strong>Redes Profissionais:</strong> Conecte-se com proprietários e gerentes de marketing no LinkedIn e grupos do setor.</li>
+                        <li><strong>Portfólio de Resultados:</strong> Demonstre "cases de sucesso" com dados concretos de aumento de tráfego/vendas.</li>
+                        <li><strong>Consultoria Inicial Gratuita:</strong> Proponha uma análise para identificar oportunidades de melhoria no marketing atual.</li>
+                        <li><strong>Modelos de Precificação:</strong>
+                            <ul>
+                                <li><strong>Taxa Fixa Mensal:</strong> Pelo serviço de gestão de campanhas (e.g., R$ 500 - R$ 1.500/mês).</li>
+                                <li><strong>Percentual sobre Mídia:</strong> Adicional sobre o investimento do cliente em anúncios (e.g., 10% a 20%).</li>
+                                <li><strong>Bônus por Performance:</strong> Percentual sobre o aumento de vendas gerado, alinhando seus interesses aos do cliente.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Acordo Contratual:</strong> Utilize contratos claros para definir escopo, prazos e valores, alinhando expectativas.</li>
+                    </ul>
+                    <p>Ser um Especialista em Anúncios para Delivery transcende a simples prestação de serviço; é uma oportunidade de negócio com potencial exponencial. Com conhecimento aprofundado e uma abordagem profissional, você impulsionará o sucesso de empreendedores e construirá uma fonte de renda robusta, superando os R$ 1.000 semanais. O próximo pedido aguarda sua expertise em marketing!</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Ganhar R$ 1.000 ou mais por semana.</p>
+                </div>
+            </div>
+
+            <!-- Guia 10 - Criação de Páginas com IA -->
+            <div class="guide-item" data-investment="medio">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number">10</div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">Criação de Páginas com IA: A Vanguarda do Design Digital</h2>
+                            <p class="guide-subtitle">Utilize inteligência artificial para desenvolver websites e escalar seus lucros.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-brain"></i> Investimento Médio
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>Inovação no Web Design: Edificando Sites com Inteligência Artificial</h3>
+                    <p>A concepção de que o desenvolvimento web é complexo, dispendioso ou exige anos de codificação é superada. A Inteligência Artificial democratizou o web design, capacitando qualquer indivíduo, sem expertise técnica avançada, a criar páginas profissionais em minutos. Seja para empreendimentos locais, lançamentos de produtos digitais ou portfólios pessoais, a demanda por presença online é colossal e você pode ser a solução, capitalizando no poder da IA.</p>
+
+                    <p>Este guia detalha como empregar ferramentas de IA como ChatGPT e Gemini para gerar códigos HTML, e plataformas "no-code" para montar websites completos. O investimento primário é em tempo para refinar sua interação com a IA e aprimorar suas competências. Posicione-se para faturar R$ 1.000 semanais ou mais, entregando velocidade e qualidade a um mercado ávido por soluções digitais.</p>
+
+                    <h3>Ecossistema de Ferramentas: ChatGPT, Gemini e Plataformas No-Code</h3>
+                    <p>Sua infraestrutura de trabalho será composta por IAs e plataformas intuitivas:</p>
+                    <ul>
+                        <li><strong>ChatGPT e Gemini (LLMs):</strong> Atuam como assistentes de codificação. Podem gerar:
+                            <ul>
+                                <li><strong>Estruturas HTML e CSS:</strong> "Desenvolva o HTML e CSS para uma landing page de vendas de um e-book, com seções de depoimentos e formulário."</li>
+                                <li><strong>Copywriting para Web:</strong> "Redija um título persuasivo para uma página de vendas de um curso de meditação."</li>
+                                <li><strong>Sugestões de Layout:</strong> "Proponha três layouts modernos para um website de cafeteria."</li>
+                                <li><strong>Funcionalidades Específicas:</strong> "Gere o código HTML e JavaScript para um formulário de contato simples com validação de e-mail."</li>
+                                <li><strong>Otimização SEO Primária:</strong> "Quais palavras-chave são cruciais para um site de consultoria financeira?"</li>
+                            </ul>
+                            <strong>Otimização de Prompt:</strong> Seja o mais específico possível em suas requisições para a IA (cores, estilo, objetivo da página) para resultados precisos.
+                        </li>
+                        <li><strong>Plataformas No-Code:</strong>
+                            <ul>
+                                <li><strong>Carrd:</strong> Excelente para landing pages e one-page websites. Rápido e com versão gratuita.</li>
+                                <li><strong>Webflow:</strong> Ferramenta robusta para personalização sem código, com curva de aprendizado. Ideal para projetos complexos.</li>
+                                <li><strong>Unbounce/Leadpages:</strong> Focadas em landing pages de alta conversão para marketing.</li>
+                                <li><strong>Wix/Hostinger Website Builder:</strong> Construtores de sites intuitivos com templates e recursos amplos.</li>
+                                <li><strong>Google Sites:</strong> Solução gratuita e simples para websites básicos.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Geração de Páginas HTML via Prompts: A Arte da Comunicação com a IA</h3>
+                    <p>A habilidade reside na interação com a IA. Siga este protocolo:</p>
+                    <ul>
+                        <li><strong>Definição do Objetivo:</strong> Venda? Geração de leads? Portfólio? Guie a IA com clareza.</li>
+                        <li><strong>Identificação do Público-Alvo:</strong> Permite que a IA ajuste o tone de voz e o design.</li>
+                        <li><strong>Estrutura Modular:</strong> Solicite os blocos principais (cabeçalho, hero, sobre, serviços, depoimentos, contato).</li>
+                        <li><strong>Estilo e Paleta de Cores:</strong> "Estilo minimalista com tons de azul e cinza", ou "Estilo corporativo com cores sóbrias".</li>
+                        <li><strong>Conteúdo Primário:</strong> Forneça textos existentes ou solicite que a IA os gere.</li>
+                        <li><strong>Responsividade:</strong> Sempre solicite "HTML e CSS responsivos para desktop e mobile".</li>
+                        <li><strong>Iteração e Refinamento:</strong> A resposta inicial da IA é um rascunho. Solicite ajustes finos para otimizar o resultado.</li>
+                        <li><strong>Sinergia IA-No-Code:</strong> Utilize a IA para conteúdo e estrutura, e as plataformas no-code para montagem visual.</li>
+                    </ul>
+
+                    <h3>Mercado de Oportunidades: Venda de Websites para Empreendedores</h3>
+                    <p>Pequenos negócios necessitam de presença online, mas carecem de orçamentos para agências tradicionais. Você é a solução eficiente:</p>
+                    <ul>
+                        <li><strong>PMEs Locais:</strong> Cabeleireiros, nutricionistas, advogados, autônomos. Demandam presença online profissional e acessível.</li>
+                        <li><strong>Produtores de Conteúdo Digital:</strong> Para lançamentos de e-books, cursos ou páginas de captura.</li>
+                        <li><strong>Profissionais Liberais:</strong> Médicos, dentistas, psicólogos que necessitam de uma vitrine digital.</li>
+                        <li><strong>Eventos e Workshops:</strong> Páginas para divulgação e venda de inscrições.</li>
+                        <li><strong>Portfólios Pessoais:</strong> Artistas, fotógrafos, escritores que precisam exibir seus trabalhos online.</li>
+                        <li><strong>Agências de Marketing:</strong> Potenciais parcerias para terceirização de landing pages.</li>
+                    </ul>
+                    <p>A criação de páginas com IA é uma competência emergente que você pode dominar hoje. Com ela, você não apenas atenderá uma demanda crescente do mercado, mas também construirá um negócio flexível e altamente lucrativo, faturando R$ 1.000 semanais ou mais, entregando valor e modernidade aos seus clientes. O futuro do web design está ao seu alcance.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Faturar até R$ 1.000/semana.</p>
+                </div>
+            </div>
+
+            <!-- Super Bônus - Método 3C -->
+            <div class="guide-item bonus-item" data-investment="alto">
+                <div class="guide-header">
+                    <div class="guide-header-left">
+                        <div class="guide-number"><i class="fas fa-star"></i></div>
+                        <div class="guide-title-wrapper">
+                            <h2 class="guide-title">SUPER BÔNUS: Método 3C - Consistência e Lucratividade Sólida</h2>
+                            <p class="guide-subtitle">A Estratégia Avançada para Multiplicação de Capital em Apostas Esportivas.</p>
+                        </div>
+                    </div>
+                    <div class="guide-info">
+                        <i class="fas fa-hand-holding-usd"></i> Alto Potencial / Maior Risco
+                        <i class="fas fa-chevron-down arrow-icon ml-4"></i>
+                    </div>
+                </div>
+                <div class="guide-content">
+                    <h3>O Método 3C: Análise Estratégica para Consistência em Apostas Esportivas</h3>
+                    <p>Descarte abordagens baseadas em especulação ou impulso emocional. O Método 3C (Conhecimento, Controle, Consistência) é uma estratégia rigorosa para o mercado de apostas esportivas, focada na expansão de capital com disciplina e mitigação de riscos. Ele não propõe retornos fáceis, mas um caminho estruturado para lucros estáveis para aqueles com disposição para análise, aplicação e, sobretudo, controle emocional e financeiro.</p>
+
+                    <p>Este bônus exclusivo explora um mercado com vasto potencial de lucro, que demanda uma abordagem profissional. Você aprenderá a operar como um investidor, não como um apostador impulsivo, transformando o que é percebido como "sorte" em uma fonte de renda previsível. Prepare-se para elevar sua capacidade de ganhos a um novo patamar de excelência.</p>
+
+                    <h3>Multiplicação de Capital: Técnicas Exclusivas para Profissionais</h3>
+                    <p>O Método 3C fundamenta-se em pilares que transcendem a simples torcida. É uma análise objetiva e calculada:</p>
+                    <ul>
+                        <li><strong>Conhecimento Aprofundado (1º C):</strong>
+                            <ul>
+                                <li><strong>Análise Estatística Avançada:</strong> Vá além dos resultados superficiais. Aprofunde-se em métricas como posse de bola, finalizações, escanteios, cartões, histórico de confrontos, desempenho em diferentes contextos (casa/fora) e médias de gols.</li>
+                                <li><strong>Entendimento do Contexto da Equipe:</strong> Avalie o momento atual do time. Considere desfalques (lesões, suspensões), motivação (objetivos no campeonato) e fadiga (sequência de jogos).</li>
+                                <li><strong>Especialização em Ligas e Mercados:</strong> Concentre-se em uma ou duas ligas (ex: Brasileirão, Premier League) e explore mercados menos visados (escanteios, cartões), que podem oferecer odds mais favoráveis.</li>
+                                <li><strong>Interpretação de Odds (Cotações):</strong> Compreenda o significado das odds e suas flutuações. Avalie se a odd representa valor em relação à sua análise de probabilidade.</li>
+                                <li><strong>Modelagem Preditiva (Avançado):</strong> Desenvolva modelos próprios de projeção de resultados baseados em dados históricos.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fragmentação de Múltiplas (Estratégia Central):</strong>
+                            <ul>
+                                <li><strong>Conceito:</strong> Em vez de uma única aposta múltipla de alto risco, fragmente-a em apostas menores e mais controladas.</li>
+                                <li><strong>Exemplo:</strong> Uma múltipla de 4 jogos (A, B, C, D) pode ser desdobrada em combinações de 2 ou 3 jogos (A+B, A+C, B+C, A+B+C), mitigando a perda total em caso de um único erro.</li>
+                                <li><strong>Recuperação Calculada (com Cautela):</strong> Ao invés da dobra de aposta (Martingale tradicional, de alto risco), o Método 3C aplica a recuperação de forma controlada, ajustando apostas subsequentes com base no capital e em novas análises, focando em pequenas margens e volume.</li>
+                                <li><strong>Mercado Over/Under (Mais/Menos Gols):</strong> Frequentemente mais previsível que o vencedor da partida, este mercado oferece boas oportunidades em múltiplas curtas.</li>
+                                <li><strong>Apostas Ao Vivo (Live Betting):</strong> Acompanhe os eventos em tempo real para identificar odds mais atrativas após eventos pontuais (gols, expulsões).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Gestão de Banca e Mitigação de Riscos: A Disciplina do Investidor</h3>
+                    <p>O Controle (2º C) é indispensável. Sem ele, mesmo a melhor estratégia é ineficaz. Este é o pilar mais crítico:</p>
+                    <ul>
+                        <li><strong>Definição de Capital:</strong> Estabeleça um capital específico para apostas, que não comprometa suas despesas essenciais.</li>
+                        <li><strong>Unidade de Aposta (Stake):</strong> Defina um valor de "unidade" como percentual de sua banca (e.g., 1% a 3%). Evite apostar acima dessa unidade por evento.</li>
+                        <li><strong>Gestão de Risco por Evento:</strong> Limite sua exposição a no máximo 5% de sua banca em qualquer evento ou estratégia, independentemente da aparente certeza.</li>
+                        <li><strong>Controle Emocional:</strong> A armadilha mais comum. Evite apostas impulsivas, reativas a perdas. Adira rigorosamente à sua estratégia.</li>
+                        <li><strong>Registro Detalhado:</strong> Mantenha um registro completo de todas as apostas (valor, odds, resultado, lucro/prejuízo) para análise e otimização.</li>
+                        <li><strong>Limites de Perda/Ganho (Stop Loss/Stop Win):</strong> Defina limites diários ou semanais. Ao atingi-los, interrompa as operações para proteger seu capital.</li>
+                        <li><strong>Reinvestimento Estratégico:</strong> Reinvista uma parcela dos lucros para crescimento consistente da banca.</li>
+                        <li><strong>Diversificação Financeira:</strong> Considere outras fontes de renda para não depender exclusivamente das apostas.</li>
+                    </ul>
+
+                    <h3>Consistência (3º C): Profissionalizando sua Operação</h3>
+                    <p>A Consistência é o resultado da aplicação rigorosa do Conhecimento e do Controle. É a essência da transformação de um hobby em um empreendimento rentável.</p>
+                    <ul>
+                        <li><strong>Rotina de Análise:</strong> Dedique tempo diário ou semanal à análise de estatísticas, notícias e tendências.</li>
+                        <li><strong>Paciência e Disciplina:</strong> Lucros consistentes demandam tempo. Mantenha a disciplina e adira ao plano, mesmo em fases adversas.</li>
+                        <li><strong>Aprendizado Contínuo:</strong> O mercado de apostas é dinâmico. Atualize-se constantemente, lendo e analisando.</li>
+                        <li><strong>Revisão de Desempenho:</strong> Analise regularmente seus registros para otimizar sua estratégia.</li>
+                        <li><strong>Mentalidade de Investidor:</strong> Adote uma perspectiva de investimento, não de jogo de sorte. Isso redefinirá suas decisões e resultados.</li>
+                    </ul>
+                    <p>O Método 3C é sua bússola para navegar no mercado de apostas esportivas. Sua aplicação disciplinada permitirá que você controle a volatilidade, transformando-a em oportunidades e construindo uma fonte de renda passiva que, com gestão adequada, pode gerar lucros substanciais e consistentes, superando suas expectativas financeiras.</p>
+                    <p class="meta-text"><i class="fas fa-bullseye"></i> Meta: Potencial de lucro consistente com disciplina.</p>
+                </div>
+            </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const guideItems = document.querySelectorAll('.guide-item');
+            const container = document.querySelector('.container');
+
+            guideItems.forEach(item => {
+                const header = item.querySelector('.guide-header');
+                const content = item.querySelector('.guide-content');
+                const arrowIcon = item.querySelector('.arrow-icon');
+
+                header.addEventListener('click', () => {
+                    content.classList.toggle('expanded');
+                    arrowIcon.classList.toggle('fa-chevron-up');
+                    arrowIcon.classList.toggle('fa-chevron-down');
+
+                    if (content.classList.contains('expanded')) {
+                        setTimeout(() => {
+                            item.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+                        }, 500);
+                    }
+                });
+            });
+
+            const headerTitle = document.querySelector('.header h1');
+            headerTitle.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            function adjustContainerPadding() {
+                if (window.innerWidth < 480) {
+                    container.style.padding = '1rem 0.5rem';
+                } else {
+                    container.style.padding = '0';
+                }
+            }
+
+            adjustContainerPadding();
+            window.addEventListener('resize', adjustContainerPadding);
+        });
+    </script>
+</body>
+</html>
